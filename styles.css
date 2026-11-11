@@ -1,0 +1,166 @@
+:root {
+  --green-dark: #0b3d2e;
+  --green: #0b5d3b;
+  --text: #1a1a1a;
+  --bg: #ffffff;
+  --bg-alt: #f1f5f3;
+  --border: #c9d6d0;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.container { width: min(1000px, 92%); margin-inline: auto; }
+
+a { color: var(--green); }
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--green-dark);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 100;
+}
+.skip-link:focus { left: 0; }
+
+:focus-visible {
+  outline: 3px solid #f5a623;
+  outline-offset: 2px;
+}
+
+/* Header */
+.site-header {
+  background: var(--green-dark);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+}
+.logo { color: #fff; font-weight: 700; font-size: 1.25rem; text-decoration: none; }
+
+.nav-menu { list-style: none; display: flex; gap: 1.5rem; }
+.nav-menu a { color: #fff; text-decoration: none; padding: 0.25rem 0; }
+.nav-menu a:hover { text-decoration: underline; }
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 2px solid #fff;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.1rem 0.6rem;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background: var(--green-dark);
+  color: #fff;
+  padding: 5rem 0;
+  text-align: center;
+}
+.hero h1 { font-size: clamp(2rem, 6vw, 3.25rem); margin-bottom: 1rem; }
+.hero-sub { font-size: 1.2rem; margin-bottom: 2rem; }
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--green-dark);
+  border: 2px solid var(--green-dark);
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.btn:hover { background: var(--green); color: #fff; }
+.hero .btn { border-color: #fff; }
+
+/* Sections */
+.section { padding: 4rem 0; }
+.section-alt { background: var(--bg-alt); }
+.section h2 { font-size: 2rem; margin-bottom: 1.25rem; color: var(--green-dark); }
+.section p { margin-bottom: 1rem; max-width: 65ch; }
+
+/* Projects */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  padding-bottom: 1rem;
+}
+.card img { width: 100%; height: auto; display: block; background: var(--bg-alt); }
+.card figcaption { font-size: 0.85rem; padding: 0.4rem 1rem; color: #4a4a4a; }
+.card h3 { padding: 0.5rem 1rem 0; color: var(--green-dark); }
+.card p { padding: 0 1rem; margin: 0.5rem 0 0; }
+
+/* Skills */
+.skills { list-style: none; display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.skills li {
+  background: var(--green-dark);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+}
+
+/* Form */
+form { max-width: 560px; }
+.field { margin-bottom: 1.25rem; }
+label { display: block; font-weight: 600; margin-bottom: 0.3rem; }
+input, textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 2px solid #6b7c74;
+  border-radius: 6px;
+  font: inherit;
+}
+.error { color: #b00020; font-size: 0.9rem; display: block; min-height: 1.2em; }
+.is-invalid { border-color: #b00020; }
+#form-status { margin-top: 1rem; font-weight: 600; color: var(--green); }
+form .btn { background: var(--green-dark); color: #fff; }
+form .btn:hover { background: var(--green); }
+
+/* Footer */
+.site-footer {
+  background: var(--green-dark);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0;
+}
+.site-footer a { color: #fff; }
+
+/* Mobile */
+@media (max-width: 700px) {
+  .nav-toggle { display: block; }
+  nav { position: absolute; top: 100%; left: 0; right: 0; background: var(--green-dark); }
+  .nav-menu { display: none; flex-direction: column; gap: 0; padding: 0.5rem 4%; }
+  .nav-menu.open { display: flex; }
+  .nav-menu a { display: block; padding: 0.75rem 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

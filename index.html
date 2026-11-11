@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samuel Bolaji | GIS Analyst &amp; Geoinformatics Professional</title>
+  <meta name="description" content="Portfolio of Samuel Bolaji, a surveying and geoinformatics professional offering GIS analysis, web GIS development and cartography for agriculture, construction and environmental projects.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="logo">BSO Geospatial & Engineering Consults</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation menu">
+        &#9776;
+      </button>
+
+      <nav role="navigation" aria-label="Main navigation">
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section id="home" class="hero">
+      <div class="container">
+        <h1>Surveying &amp; Geoinformatics</h1>
+        <p class="hero-sub">I turn spatial data into maps and web tools that help people make decisions.</p>
+        <a class="btn" href="#projects">View my projects</a>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>I am a surveying and geoinformatics professional based in Nigeria. I deliver GIS analysis and cartographic work for clients across agriculture, construction and environmental sectors, collaborating remotely with international teams.</p>
+        <p>I run BSO Geospatial &amp; Engineering Consults and I am growing my skills in web development to build GIS applications for the browser.</p>
+      </div>
+    </section>
+
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid">
+
+          <article class="card">
+            <figure>
+              <img src="land-suitability.jpg" alt="Map of Osun State coloured by land suitability class for arable crops" width="400" height="250">
+              <figcaption>Land suitability map, Osun State</figcaption>
+            </figure>
+            <h3>Arable Land Suitability DSS</h3>
+            <p>A web-based GIS decision support system that classifies land suitability for arable farming in Osun State.</p>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="gold-mining-gis.jpg" alt="Web map showing gold mining sites across West Africa with a data table beside it" width="400" height="250">
+              <figcaption>Gold mining web GIS interface</figcaption>
+            </figure>
+            <h3>Gold Mining Management System</h3>
+            <p>A web GIS for managing mining sites in West Africa, combining spatial data, attributes and reporting.</p>
+          </article>
+
+          <article class="card">
+            <figure>
+              <img src="map-automation.jpg" alt="Diagram of an automated workflow that produces maps from field data" width="400" height="250">
+              <figcaption>Automated map generation workflow</figcaption>
+            </figure>
+            <h3>Automated Map Generation</h3>
+            <p>An n8n workflow that generates maps automatically from incoming field data, saving hours of manual work.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <div class="container">
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li>QGIS</li>
+          <li>ArcGIS Pro</li>
+          <li>AutoCAD Civil 3D</li>
+          <li>Cartography</li>
+          <li>Spatial Analysis</li>
+          <li>HTML, CSS &amp; JavaScript</li>
+          <li>Git &amp; GitHub</li>
+          <li>Spring Boot (learning)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <h2>Contact</h2>
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <span class="error" id="name-error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="error" id="email-error" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="error" id="message-error" aria-live="polite"></span>
+          </div>
+
+          <button type="submit" class="btn">Send message</button>
+          <p id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Samuel Bolaji. All rights reserved.</p>
+      <p><a href="https://github.com/Bolajisamuel">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
